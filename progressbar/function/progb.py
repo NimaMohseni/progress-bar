@@ -17,7 +17,8 @@ class progressbar():
     self.itert += itertime
     self.time1 = self.time2
     elapsedt = self.time2 - self.starttime
-    avgiter = elapsedt/(value+1)
+    if (value!=0):
+      avgiter = elapsedt/(value)
     percent = float(value) / endvalue
     if (percent >= (1-(1 / endvalue))):
       percent = 1
